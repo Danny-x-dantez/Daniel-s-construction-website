@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Project Team</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#team {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.member {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #cccccc;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    color: #007bff;
+}
+
+p {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    .member {
+        margin: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div id="team">
+        <h1>Meet Our Construction Project Team</h1>
+        <div class="member" id="natasha">
+            <h2>Natasha Smith - Chief Engineer</h2>
+            <p>Leads project design and engineering strategies.</p>
+        </div>
+        <div class="member" id="janice">
+            <h2>Janice Johnson - Engineer</h2>
+            <p>Specializes in infrastructure and sustainability practices.</p>
+        </div>
+        <div class="member" id="andrew">
+            <h2>Andrew Joseph - Chief Electrician</h2>
+            <p>Oversees all electrical installations and maintenance.</p>
+        </div>
+        <div class="member" id="mohammed">
+            <h2>Mohammed Saleem - Chief Engineer</h2>
+            <p>Focuses on project management and operational efficiency.</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const members = document.querySelectorAll('.member');
+
+    members.forEach(member => {
+        member.addEventListener('click', function() {
+            const p = this.querySelector('p');
+            if (p.style.display === 'none') {
+                p.style.display = 'block';
+            } else {
+                p.style.display = 'none';
+            }
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
